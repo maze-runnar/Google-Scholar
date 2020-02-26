@@ -10,6 +10,8 @@ from .scrap import Scraper
 
 from django.http import HttpResponseRedirect
 
+from django.http import HttpResponse
+
 from django.urls import reverse
 
 from .models import ScholarProfile
@@ -27,6 +29,7 @@ from django.db.models import Q
 from rest_framework.generics import ListAPIView, DestroyAPIView
 
 from .serializers import ScholarProfileSerializer
+
 
 class HomeView(TemplateView):
 	template_name = 'metrics/home.html'
@@ -55,6 +58,28 @@ class HomeView(TemplateView):
 class Listview(ListAPIView):
   queryset = ScholarProfile.objects.all()
   serializer_class = ScholarProfileSerializer
+
+
+
+class RegisterScholarView(TemplateView):
+  template_name = 'metrics/register.html'
+  def get(self, request):
+    search_form = SearchForm
+    index_form  = IndexForm
+    return render(request, self.template_name, {'indexform': index_form})
+  def post(self, request):
+    indexform = IndexForm(request.POST)
+    if indexform.is_valid():
+      text1 = indexform.cleaned_data['scholar_url']
+      text2 = indexform.cleaned_data['max_approx_publications']
+      text3 = indexform.cleaned_data['country']
+      print(text1, text2, text3)
+      z= Scraper(text1, text2, text3)
+      key= z.getScholarData()
+    return HttpResponse("Succesfully Registered")
+
+
+
 
 
 
