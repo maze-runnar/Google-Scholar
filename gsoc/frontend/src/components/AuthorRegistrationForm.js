@@ -4,7 +4,9 @@ const { Option } = Select;
 
 
 class RegistrationForm extends React.Component{
+
 	render(){
+
 	  return (
 		<div >
 		  <div style={{textAlign:'center'}}>
@@ -16,7 +18,7 @@ class RegistrationForm extends React.Component{
 		    And precise data of Scholars
 		  </small>
 		  </div>
-		  <Form style={{ padding : '50px'}} >
+		  {/* <Form style={{ padding : '50px'}} >
 			<Form.Item label="Scholar URL" hasFeedback validateStatus="success">
 			  <Input style={{ width: '100%', height:'40px' }} />
 			</Form.Item>
@@ -38,8 +40,17 @@ class RegistrationForm extends React.Component{
 				</Select>
 			</Form.Item>
 			<Button type="primary" icon="login" style={{height:'45px'}}>Register</Button>
-		  </Form>
+      </Form> */}
+    <div style ={{textAlign: 'center', padding: '30px'}}>
+      <Button style={{backgroundColor:'green', width: '80%', color: 'white', height: '40px'}}
+       onClick={() => window.open("http://127.0.0.1:8000/metrics/register","myWindow",'width=500,height=600,left=100,dom.disable_window_open_feature.location=true')}>
+        Register
+      </Button>
+    </div>
+      <br/>
+      <br/>
 	  </div>
+
 	  );
 	}
 }
