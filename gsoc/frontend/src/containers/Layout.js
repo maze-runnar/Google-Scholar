@@ -21,10 +21,12 @@ const CustomLayout = (props) => {
 
       >
         <Menu.Item key="1" href="/metrics"><Link to="/"><Icon type="home" /> Home</Link></Menu.Item>
+        <Menu.Item key="6"><Link to="/register"><Icon type="login" /> Register</Link></Menu.Item>
         <Menu.Item key="2"><Link to="/search"><Icon type="search" /> Search</Link></Menu.Item>
         <Menu.Item key="3"><Link to="/info"><Icon type="info-circle" /> About</Link></Menu.Item>
         <Menu.Item key="4"><Link to="/contact"><Icon type="mail" /> Contact</Link></Menu.Item>
         <Menu.Item key="5"><Link to="/allscholars"><Icon type="user" /> AllScholars</Link></Menu.Item>
+
 
       </Menu>
     </Header>

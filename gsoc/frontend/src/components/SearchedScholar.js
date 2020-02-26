@@ -35,7 +35,7 @@ const SearchedScholar = (props)=>{
         <List.Item.Meta
           avatar={<Avatar src={"https://img.favpng.com/15/23/14/google-scholar-academic-journal-google-logo-education-png-favpng-0uceM1mAtbc5DfsdtKmriNSDW.jpg"} />}
           title={<a href={item.profile_url}><span style={{fontWeight: 'bold'}}>Author Name: </span>{item.author_name}</a>}
-          description={<a href={item.profile_url}><span style={{fontWeight:'bold'}}>Profile: </span>{item.profile_url}</a>}
+          description={<a href={"http://scholar.google.com/citations?user=" + item.profile_url}><span style={{fontWeight:'bold'}}>Profile: </span>http://scholar.google.com/citations?user={item.profile_url}</a>}
 
         />
         <div style={{marginLeft:'40px'}}>
@@ -45,9 +45,11 @@ const SearchedScholar = (props)=>{
        <Button style={{backgroundColor:'#0a6f6f', borderRadius:'0', color:'white'}}>
           Aossie Scholar Profile
         </Button>
+        <a href={"http://scholar.google.com/citations?user=" + item.profile_url}>
         <Button style={{backgroundColor:'#0a6f6f', borderRadius:'0', color:'white'}}>
           Google Scholar Profile
         </Button>
+        </a>
         </div>
 
         {/* <ul>

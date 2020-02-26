@@ -8,33 +8,48 @@
    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css?family=Sofia" rel='stylesheet'>
     </head>
-    <body style="background-image: url('')">
+    <body style="background-image: url('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
     <div style="padding:30px">
       <div style="text-align:center">
         <span style="font-size:25px; font-family: initial" >
           Register To <span style="color:green">Aossie</span> <span style="color: yellow">Scholar</span>
         </span>
       </div>
-        <form method="post">
-          <div class= "">
-          {% csrf_token %}
-          {% for field in indexform %}
-            <div class="fieldWrapper">
-                {{ field.errors }}
-                {{ field.label_tag }}
-                <div style ="text-align: center">
-                {{ field }}
-                </div>
-                {% if field.help_text %}
-                <p class="help">{{ field.help_text|safe }}</p>
-                {% endif %}
+      <div class="d-flex justify-content-center" style="margin-top: 50px">
+          <form method="post" onsubmit="return remove()">
+            <div id ="me">
+            {% csrf_token %}
+            {% for field in indexform %}
+              <div class="fieldWrapper" >
+                  {{ field.errors }}
+                  {{ field.label_tag }}
+                  <div style ="text-align: center">
+                  {{ field }}
+                  </div>
+                  {% if field.help_text %}
+                  <p class="help">{{ field.help_text|safe }}</p>
+                  {% endif %}
+              </div>
+            {% endfor %}
+            <br>
+            <div style="text-align:center">
+              <button type="submit" class="btn btn-success" id="register-btn" style="width:80%" >Register</button>
             </div>
-          {% endfor %}
-          <br>
-          <div style="text-align:center">
-            <button type="submit" class="btn btn-success" id="register-btn" style="width:80%">Register</button>
-          </div>
-        </form>
+          </form>
     </div>
+    <div class="d-flex justify-content-center" style="margin-top: 50px">
+
+     <div  role="status" style="display: none;" id="spinner">
+        <img src="https://cdn.lowgif.com/full/bbd4dc3b1f8a454b-loading-gif-transparent-11-gif-images-download.gif" width="350px" ></div>
+      </div>
+    </div>
+     
+    <script type="text/javascript">
+      function remove(){
+        document.getElementById("spinner").style.display = "block";
+        document.getElementById("me").style.display = "none";
+        return true;
+      }
+    </script>
     </body>
   </html>

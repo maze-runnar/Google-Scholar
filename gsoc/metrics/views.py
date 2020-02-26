@@ -76,7 +76,8 @@ class RegisterScholarView(TemplateView):
       print(text1, text2, text3)
       z= Scraper(text1, text2, text3)
       key= z.getScholarData()
-    return HttpResponse("Succesfully Registered")
+      message = "<h2> Succesfully Reistered with Aossie Scholar</h2>"
+    return HttpResponse(message)
 
 
 
