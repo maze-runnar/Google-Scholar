@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Select, InputNumber, Button } from 'antd';
+import { Form, Input, Select, InputNumber, Button, Row, Col } from 'antd';
 const { Option } = Select;
 
 
@@ -41,12 +41,23 @@ class RegistrationForm extends React.Component{
 			</Form.Item>
 			<Button type="primary" icon="login" style={{height:'45px'}}>Register</Button>
       </Form> */}
-    <div style ={{textAlign: 'center', padding: '30px'}}>
-      <Button style={{backgroundColor:'green', width: '80%', color: 'white', height: '40px'}}
-       onClick={() => window.open("http://127.0.0.1:8000/metrics/register","myWindow",'width=500,height=600,left=100,dom.disable_window_open_feature.location=true')}>
-        Register
-      </Button>
-    </div>
+
+
+        <Row>
+        <Col xs={2} sm={4} md={6} lg={6} xl={6}></Col>
+        <Col xs={20} sm={16} md={12} lg={12} xl={12}>
+        <div style ={{ padding: '30px'}}>
+        <Button
+        style={{backgroundColor:'green', width: '100%', color: 'white', height: '40px'}}
+        onClick={() => window.open("http://127.0.0.1:8000/metrics/register","myWindow", 'width=500, height=600, left=400, top=100, dom.disable_window_open_feature.location=true')}>
+          Register
+        </Button>
+        </div>
+        </Col>
+        <Col xs={2} sm={4} md={6} lg={6} xl={6}></Col>
+        </Row>
+
+
       <br/>
       <br/>
 	  </div>
