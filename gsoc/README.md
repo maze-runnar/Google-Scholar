@@ -1,29 +1,37 @@
-
 # Aossie-Scholar
 
-The project is related to Google Scholar profiles and metrics. Many researchers have a Google Scholar profile. 
-It is used by people to see how many papers a researcher has written, how many citations they have received, their h-index, i10-index... 
-But these metrics are flawed. The goal of the project would be to extract information from Google Scholar and compute better metrics about a researcher's performance.
-And then display this information and metrics with more fairer stats in another website.
+Aossie scholar is a metric computation system for researchers with a Google Scholar profile. Google Scholar provides researchers with stats such as the number of publications, citations, h-index and i10 index. But, these metrics are flawed. Aossie Scholar extracts some basic information form Google Scholar and computes better metrics, and displays them on another website. So, researchers can now see better, effective metrics with a single click.
 
-# How the app works currently ?
-    Currently the homepage of Aossie Scholar has two options to either search for an already registered Scholar or to register (or see metrics for) a Google Scholar.
-    To register a scholar, it is must that s/he owns a Google Scholar profile because it is from there Aossie Scholar scraps the data required for calculating other new metrics.
-    So the home page contains a registeration form which is to be filled with a Scholar's Google Scholar profile URL. Once you do that, s/he is registered on Aossie Scholar and 
-    you will be directed to his/her profile where you can see all his publications and other metrics.
-    There is also a metric page which defines the metrics.
+## Requirements
+
+Aossie Scholar requires Django 2.2.x, which and more dependencies are installed by ```requirements.txt```.
+
+Postgres as a database server is required. For downloading and documentation, visit https://www.postgresql.org/
 
 
-# Setting up the database
+### Installation
+ 
+* git remote add origin https://gitlab.com/aossie/aossie-scholar.git
+* git pull origin master
+* pip install -r requirements.txt
+* Enter your Postgresql credentials in ```settings.py```
+* Make sure selenium webdriver is in correct path(eg. for Ubuntu in `usr/local/bin`)
+* python manage.py makemigrations
+* python manage.py migrate
+* python manage.py runserver
 
-This project runs on postgresql database. For downloading and documentation, please go to https://www.postgresql.org/ .
+## Running
+After running the server, point your browser to http://127.0.0.1:8000/metrics/ .To register, enter your Google Scholar profile URL(such as https://scholar.google.com/citations?hl=en&user=m8dFEawAAAAJ) and click ```Register```. You will be directed to the profiles page showing better stats. You can click on individual metrics for details. To search for an already registered scholar, simply search his/her name in the search bar.
 
-## To run the app locally,
-    # git remote add origin https://gitlab.com/aossie/aossie-scholar.git
-    # git pull origin master
-    # pip install -r requirements.txt
-    # Enter your Postgresql credentials in ```settings.py```
-    # python manage.py runserver
-    
-   Now, you should be able to see the app running on your local server here -http://127.0.0.1:8000/metrics/
-   You can now use any profile url from google scholar website like this -https://scholar.google.com/citations?hl=en&user=m8dFEawAAAAJ , to fill in the form.
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gitlab.com/aossie/aossie-scholar/-/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+
+## License
+
+This project is licensed under the GNU General Public License - see the [LICENSE.md](https://gitlab.com/adityabisoi/aossie-scholar/-/blob/master/LICENSE) file for details
+
+## Support
+
+If you would like to talk to other Aossie Scholar users and developers, visit our [Gitter channel](https://gitter.im/AOSSIE/AossieScholar)
