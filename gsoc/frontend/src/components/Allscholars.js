@@ -27,13 +27,13 @@ const Allscholars = (props)=>{
           <img
             width={125}
             alt="logo"
-            src="https://scholar.googleusercontent.com/citations?view_op=view_photo&user=-1zoEd0AAAAJ&citpid=1"
+            src={"https://scholar.google.com.au/citations?view_op=view_photo&user="+item.profile_url+"&citpid=2"}
           />
         }
       >
         <List.Item.Meta
           avatar={<Avatar src={"https://img.favpng.com/15/23/14/google-scholar-academic-journal-google-logo-education-png-favpng-0uceM1mAtbc5DfsdtKmriNSDW.jpg"} />}
-          title={<a href={item.profile_url}><span style={{fontWeight: 'bold'}}>Author Name: </span>{item.author_name}</a>}
+          title={<a href={"profile/"+item.profile_url}><span style={{fontWeight: 'bold'}}>Author Name: </span>{item.author_name}</a>}
           description={<a href={item.profile_url}><span style={{fontWeight:'bold'}}>Profile: </span>{item.profile_url}</a>}
 
         />
@@ -41,10 +41,11 @@ const Allscholars = (props)=>{
        <span style={{fontFamily:'inherit', fontSize:'20px', fontWeight: 'bold'}}> Website </span>: {item.Website}
        <br/>
        <br/>
-
+       <a href={"http://localhost:3000/profile/" + item.profile_url}>
         <Button style={{backgroundColor:'teal', borderRadius:'0', color:'white'}}>
           Read More
         </Button>
+      </a>
         </div>
 
         {/* <ul>

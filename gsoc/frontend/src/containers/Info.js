@@ -100,7 +100,7 @@ const Info = () => {
             <h3>h-median is the geometric median of the number of citations in the set of
                the top-cited h articles of a publication. For example, a publication with
                itations 18, 7, 6, 3 and 2 respectively has a h-index of 3.
-               Its top-cited article set is { 18, 7, 6 }.So, the h-median is its geometric
+               Its top-cited article set is the h-median is its geometric
                median, which is 7.
             </h3>
           </div>

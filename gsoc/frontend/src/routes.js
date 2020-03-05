@@ -7,6 +7,9 @@ import Index from './containers/Index';
 import Info from './containers/Info';
 import Contact from './components/Contact';
 import ScholarsList from './containers/ScholarsListView';
+import Profile from './containers/Profile';
+import ScholarDetail from './containers/ScholarDetail';
+
 const BaseRouter =()=>(
     <div>
       <Route exact path='/metrics' component = {LoadMoreList}/>
@@ -16,7 +19,9 @@ const BaseRouter =()=>(
       <Route exact path='/info' component = {Info}/>
       <Route exact path='/contact' component = {Contact}/>
       <Route exact path='/allscholars' component = {ScholarsList}/>
+      <Route exact path='/profile/:scholarurl' component = {ScholarDetail}/>
 
+      <Route exact path='/profile' component = {Profile}/>
     </div>
 );
 
