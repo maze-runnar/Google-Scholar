@@ -54,7 +54,7 @@ class SearchForm extends React.Component {
           </div>
           <div>
           <SearchedScholar data = {this.state.scholars.filter((scholar) => {
-        return scholar.author_name.includes(this.state.value) && this.state.value !== '';
+        return scholar.author_name.toUpperCase().includes(this.state.value.toUpperCase()) && this.state.value !== '';
       })}/>
           </div>
         </div>

@@ -28,23 +28,24 @@ const SearchedScholar = (props)=>{
             width={125}
             alt="scholar img"
             src={"https://scholar.google.com.au/citations?view_op=view_photo&user="+item.profile_url+"&citpid=2"}
-
             />
         }
       >
         <List.Item.Meta
           avatar={<Avatar src={"https://img.favpng.com/15/23/14/google-scholar-academic-journal-google-logo-education-png-favpng-0uceM1mAtbc5DfsdtKmriNSDW.jpg"} />}
-          title={<a href={item.profile_url}><span style={{fontWeight: 'bold'}}>Author Name: </span>{item.author_name}</a>}
+          title={<a href={"profile/" + item.profile_url}><span style={{fontWeight: 'bold'}}>Author Name: </span>{item.author_name}</a>}
           description={<a href={"http://scholar.google.com/citations?user=" + item.profile_url}><span style={{fontWeight:'bold'}}>Profile: </span>http://scholar.google.com/citations?user={item.profile_url}</a>}
 
         />
         <div style={{marginLeft:'40px'}}>
        <span style={{fontFamily:'inherit', fontSize:'20px', fontWeight: 'bold'}}> Website </span>: {item.Website}
-       <br/>
-       <br/>
-       <Button style={{backgroundColor:'#0a6f6f', borderRadius:'0', color:'white'}}>
-          Aossie Scholar Profile
-        </Button>
+        <br/>
+        <br/>
+        <a href={"http://localhost:3000/profile/" + item.profile_url}>
+          <Button style={{backgroundColor:'#0a6f6f', borderRadius:'0', color:'white'}}>
+              Aossie Scholar Profile
+          </Button>
+        </a>
         <a href={"http://scholar.google.com/citations?user=" + item.profile_url}>
         <Button style={{backgroundColor:'#0a6f6f', borderRadius:'0', color:'white'}}>
           Google Scholar Profile
