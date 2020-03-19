@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col} from 'antd';
+import Gitter from '../assets/gitter.jpg';
 const Contact = (props) => {
   return(
     <div style={{textAlign: 'center'}}>
@@ -8,7 +9,7 @@ const Contact = (props) => {
      <Row>
        <Col sm={12} md={12} lg = {12}>
        <a href="https://gitter.im/AOSSIE/AossieScholar">
-         <img src="https://pbs.twimg.com/media/C6-XYTSXEAU7Ubg.jpg" width ="80%"/>
+         <img src={Gitter} width ="80%"/>
        </a>
        </Col>
        <Col sm={12} md={12} lg = {12} >

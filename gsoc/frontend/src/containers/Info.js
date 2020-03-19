@@ -1,5 +1,13 @@
 import React from 'react';
 import { Row, Col, Card } from 'antd';
+import Hindex1 from '../assets/hindex.png';
+import Hindex2 from '../assets/hindexvisual.png';
+import Mindex from '../assets/mindex.png';
+import Gindex from '../assets/gindex.png';
+import TNC from '../assets/TNC.jpg';
+import Oindex from '../assets/oindex.png'; 
+
+
 const Info = () => {
   return (
     <div>
@@ -13,10 +21,10 @@ const Info = () => {
         <h3>H-index is the largest number h such that h publications have at least h citations.</h3>
         <Row>
           <Col xs={24} sm={24} md={12} lg={12} style={{padding:'10px'}}>
-            <img src="https://s3.amazonaws.com/libapps/customers/5095/images/h-index_visual.png" alt="hgraph" border="0" width="80%"/>
+            <img src={Hindex2} alt="hgraph" border="0" width="80%"/>
           </Col>
           <Col xs={24} sm={24} md={12} lg={12} style={{padding:'10px'}}>
-            <img src="https://i.ibb.co/sKnm7dH/hindex.png" alt="hindex" border="0" width ="100%" height="150%"/>
+            <img src={Hindex1} alt="hindex" border="0" width ="100%" height="150%"/>
           </Col>
         </Row>
       </div>
@@ -32,7 +40,7 @@ const Info = () => {
           m-index inherently assumes unbroken research activity since the first publication.</h3>
           <Row >
             <Col xs={24} sm={24} md={24} lg={24} style={{padding:'10px'}}>
-              <img src="https://i.ibb.co/2h1NYy0/m-index.png" alt="m-index" border="0" width="90%" />
+              <img src={Mindex} alt="m-index" border="0" width="90%" />
             </Col>
 
           </Row>
@@ -47,7 +55,7 @@ const Info = () => {
             cited papers in a data set. The g-index is always the same as or higher than the h-index.</h3>
             <Row>
               <Col xs={24} sm={24} md={24} lg={24} style={{padding:'10px'}}>
-                <img src="https://i.ibb.co/DV0NbHM/g-index.png" alt="g-index" border="0" width = "90%"/>
+                <img src={Gindex} alt="g-index" border="0" width = "90%"/>
               </Col>
 
             </Row>
@@ -72,7 +80,7 @@ const Info = () => {
             </h3>
             <Row>
               <Col xs={24} sm={24} md={24} lg={24} style={{padding:'10px'}}>
-              <img src="https://i.ibb.co/nszZnNL/TNC.jpg" alt="TNC" border="0" width="50%"/>
+              <img src={TNC} alt="TNC" border="0" width="50%"/>
               </Col>
             </Row>
           </div>
@@ -87,7 +95,7 @@ const Info = () => {
             </h3>
             <Row>
               <Col xs={24} sm={24} md={24} lg={24} style={{padding:'10px'}}>
-              <img src="https://i.ibb.co/wsVBFVs/o-index.png" alt="o-index" border="0" width="50%"/>
+              <img src={Oindex} alt="o-index" border="0" width="50%"/>
               </Col>
             </Row>
           </div>
