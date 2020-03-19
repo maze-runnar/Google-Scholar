@@ -10,7 +10,7 @@
     </head>
     <body style="background-image: url('')">
     <div style="padding:30px">
-      <div style="text-align:center">
+      <div style="text-align:center" id="aossie-block">
         <span style="font-size:25px; font-family: initial" >
           Register To <span style="color:green">Aossie</span> <span style="color: yellow">Scholar</span>
         </span>
@@ -40,7 +40,7 @@
     <div class="d-flex justify-content-center" style="margin-top: 50px">
 
      <div  role="status" style="display: none;" id="spinner">
-        <img src="https://epaper.timesgroup.com/TOI/TimesOfIndia/Images/Spinner.gif" width="350px" ></div>
+        <img src="https://i.ya-webdesign.com/images/minimalist-transparent-loading-gif-9.gif" width="250px" ></div>
       </div>
     </div>
 
@@ -48,6 +48,7 @@
       function remove(){
         document.getElementById("spinner").style.display = "block";
         document.getElementById("me").style.display = "none";
+        document.getElementById("aossie-block").style.display = "none";
         return true;
       }
     </script>
